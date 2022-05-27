@@ -2,6 +2,8 @@
 
 class Users {
 
+    use ProductPrice;
+
     public $name;
     public $lastname;
     public $email;
@@ -23,11 +25,12 @@ class Users {
 
     public function setSconto($registered_user) {
         if($registered_user === true) {
-            $this->discount = 0.20;
-        } 
+            $this->discount = 0.20;              
+        }
     }
 
     public function getSconto() {
-        return $this->discount;
+      return $this->discount;
     }
+
 }

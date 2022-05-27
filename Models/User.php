@@ -1,11 +1,10 @@
 <?php
 
 class User extends Users {
-
+    
     public $username;
     public $password;
     public $identification;
-
 
     public function __construct(String $name,String $lastname,String $email, Bool $credit_card, Float $discount, bool $registered_user, String $username, String $password, Int $identification) {
 
@@ -22,6 +21,4 @@ class User extends Users {
     public function getRegisteredUser() {
        return $this->registered_user;
     }
-
-
 }

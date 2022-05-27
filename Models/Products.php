@@ -1,6 +1,17 @@
 <?php
 
+trait ProductPrice {
+    public $message;
+
+    public function tellPrice() {
+       /*  echo 'Questo è il prezzo'; */
+       $this->message = 'Sei bello panzerello';
+    }
+}
+
 class Products {
+
+    use ProductPrice;
 
     public $name;
     public $type;
@@ -10,7 +21,7 @@ class Products {
     
     
     
-    public function __construct(String $name, String $type, Mixed $price, String $description, Bool $availability){
+    public function __construct(String $name, String $type, Int $price, String $description, bool $availability){
         $this->name = $name;
         $this->type = $type;
         $this->price = $price;
