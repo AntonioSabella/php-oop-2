@@ -22,22 +22,31 @@ var_dump($prodotto_1); */
 var_dump($crocchette); */
 
 $user_no_discount = new Users('Antonio','Sabella','antonio@gmail.com', true, 0, false);
+$user_no_discount->tellPrice();
 var_dump($user_no_discount);
 
 $user_discount = new User('Roberto', 'Iannelli', 'roberto@gmail.com', true, 0, false, 'RobertoPazzerello', 'fgfh44', 7575844);
 
 $user_discount -> setRegisteredUser();
 $user_discount -> setSconto(true);
+$user_discount->tellPrice();
 
 /* var_dump(getSconto()); */
 
 var_dump($user_discount);
 
 $pasto_in_scatola = new Products('Mangia Sano','Mangime', 15, 'Un pasto salutare per il tuo animale', true);
+$pasto_in_scatola->tellPrice();
 var_dump($pasto_in_scatola);
 $crocchette = new Products('Mangia bene','Crocchette', 25, 'Un pasto salutare per il tuo animale', true);
+$crocchette->tellPrice();
+
 $ciotolin = new Products('Ciotola antischizzo','Ciotola', 35, 'La miglior ciotola del pianeta', true);
+$ciotolin->tellPrice();
+
 $collare = new Products('No strozz','Collare', 12, 'Il collare per tenere a bada gli istinti del tuo animale', true);
+$collare->tellPrice();
+
 
 $products = [
     $pasto_in_scatola,
@@ -45,6 +54,8 @@ $products = [
     $ciotolin,
     $collare,
 ];
+
+
 
 var_dump($products);
 

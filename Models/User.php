@@ -2,6 +2,8 @@
 
 class User extends Users {
     
+    /* use ProductPrice; In questo punto non è necessario poichè eredita il trait dal genitore*/
+
     public $username;
     public $password;
     public $identification;
